@@ -33,7 +33,25 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         #region Mouvement
-        
+        // On prend les valeurs x et z de l'orientation actuelle locale du joueur pour les convertir en valeurs globales
+        // Donc maintenant forward et right remplacent Vector3.forward et Vector3.right
+        Vector3 forward = transform.TransformDirection(Vector3.forward);
+        Vector3 right = transform.TransformDirection(Vector3.right);
+
+        // Prend la valeur des inputs
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
+
+        // Shift pour courir
+        bool isRunning = Input.GetKey(KeyCode.LeftShift);
+
+        // Si le joueur peut bouger, on utilise la vitesse de run s'il appuie sur shift sinon la vitesse de walk
+        float curSpeedX = canMove ? (isRunning ? runSpeed : walkSpeed) * Input.GetAxis("Vertical") : 0;
+        float curSpeedY = canMove ? (isRunning ? runSpeed : walkSpeed) * Input.GetAxis("Horizontal") : 0;
+
+        moveDirection = (forward * curSpeedX) + (right * curSpeedY);
+
+        controller.Move(moveDirection * Time.deltaTime);
         #endregion
     }
 }
