@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Test de trigger d'évènements lorsque le joueur enntre dans un collider, à appliquer aux colliders en question
+/// </summary>
 public class TestTrigger : MonoBehaviour
 {
     public AudioSource audiosource;

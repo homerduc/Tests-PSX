@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Look Settings")]
     public float lookSpeed = 2.0f;
-    public float lookYLimit = 45.0f;
+    public float lookYLimit = 60.0f;
 
     [Header("References")]
     public Camera playerCamera;
@@ -47,6 +47,16 @@ public class PlayerController : MonoBehaviour
         }
 
         ApplyMovement();
+    }
+
+    public void EnablePlayerMovement()
+    {
+        canMove = true;
+    }
+
+    public void DisablePlayerMovement()
+    {
+        canMove = false;
     }
 
     /// <summary>

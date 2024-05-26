@@ -245,13 +245,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 724ca94a03d8156469b14cd99b7897dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 6
-  runSpeed: 12
+  walkSpeed: 5
+  runSpeed: 7
   jumpPower: 7
-  gravity: 10
+  gravity: 11
   canMove: 1
   lookSpeed: 2
-  lookYLimit: 45
+  lookYLimit: 60
   playerCamera: {fileID: 2043968042}
 --- !u!143 &55591392
 CharacterController:
@@ -1337,6 +1337,8 @@ GameObject:
   - component: {fileID: 982613663}
   - component: {fileID: 982613668}
   - component: {fileID: 982613667}
+  - component: {fileID: 982613670}
+  - component: {fileID: 982613669}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Interactable
@@ -1459,6 +1461,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 982613669}
+        m_TargetAssemblyTypeName: TestAnimCyl, Assembly-CSharp
+        m_MethodName: StartAnim
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &982613668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1473,10 +1487,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineMode: 0
   outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 2
+  outlineWidth: 10
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &982613669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982613662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6e326c5cb7993146b875b6d8a2aff0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &982613670
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982613662}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fdeb55b848a88764588fc6d3b9966892, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1313937265
 GameObject:
   m_ObjectHideFlags: 0

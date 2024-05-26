@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Gère la fonctionnalité d'interaction du joueur
+/// </summary>
 public class PlayerInteraction : MonoBehaviour
 {
     public float playerReach = 3f;
