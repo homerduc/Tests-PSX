@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 55591392}
   - component: {fileID: 55591391}
   - component: {fileID: 55591393}
+  - component: {fileID: 55591394}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -293,6 +294,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerReach: 3
   camera: {fileID: 2043968042}
+--- !u!114 &55591394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55591386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4ff7ffe04d3067469a524157188e341, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items: []
 --- !u!1 &84645504
 GameObject:
   m_ObjectHideFlags: 0
@@ -1337,6 +1351,7 @@ GameObject:
   - component: {fileID: 875326371}
   - component: {fileID: 875326370}
   - component: {fileID: 875326369}
+  - component: {fileID: 875326375}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Interactable
@@ -1358,7 +1373,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onInteraction:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 875326375}
+        m_TargetAssemblyTypeName: PickupItem, Assembly-CSharp
+        m_MethodName: Pickup
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &875326370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1418,7 +1445,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: c90233d6e8528684e88827004f15fa5a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1463,6 +1490,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &875326375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875326368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93cc7b9a3b1e7324aa6614e105b31add, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item:
+    itemName: Sphereitem
+    icon: {fileID: 0}
+    id: 100
+  player: {fileID: 55591386}
 --- !u!1 &982613662
 GameObject:
   m_ObjectHideFlags: 0
@@ -2249,9 +2293,9 @@ SceneRoots:
   - {fileID: 580774289}
   - {fileID: 97222413}
   - {fileID: 311325899}
-  - {fileID: 55591390}
   - {fileID: 143013398}
   - {fileID: 982613666}
   - {fileID: 1906536426}
   - {fileID: 1963385251}
   - {fileID: 875326374}
+  - {fileID: 55591390}
