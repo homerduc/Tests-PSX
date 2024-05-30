@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Gère la fonctionnalité d'interaction du joueur
+/// Gère la fonctionnalité d'interaction du joueur, met continuellement à jour l'objet avec lequel le joueur peut interagir
 /// </summary>
 public class PlayerInteraction : MonoBehaviour
 {
