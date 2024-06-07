@@ -1502,10 +1502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93cc7b9a3b1e7324aa6614e105b31add, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: Sphereitem
-    icon: {fileID: 0}
-    id: 100
+  item: {fileID: 11400000, guid: f968a6e2069a2cd4ba00e7aafb07ab34, type: 2}
   player: {fileID: 55591386}
 --- !u!1 &982613662
 GameObject:

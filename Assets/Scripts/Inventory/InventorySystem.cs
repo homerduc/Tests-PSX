@@ -8,11 +8,10 @@ using UnityEngine;
 public class InventorySystem : MonoBehaviour
 {
     public List<InventoryItem> items = new List<InventoryItem>();
-
     // L'indice 0 est la main vide
     private int currentIndex = 0;
 
-    // juste pour tester
+
     private void Start()
     {
         items.Add(new InventoryItem { icon = null, id = 0, itemName = "main vide" });

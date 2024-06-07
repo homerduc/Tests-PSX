@@ -6,7 +6,8 @@ using UnityEngine;
 /// Représente un item d'inventaire, n'est pas hérité de MonoBehavior
 /// </summary>
 [System.Serializable]
-public class InventoryItem
+[CreateAssetMenu]
+public class InventoryItem : ScriptableObject
 {
     public string itemName;
     public Sprite icon;
